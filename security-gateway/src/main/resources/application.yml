@@ -1,0 +1,18 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: security-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: kris.com:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: service-acl
+          predicates: Path=/*/acl/**
+          uri: lb://service-acl
+

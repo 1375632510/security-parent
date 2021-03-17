@@ -1,0 +1,36 @@
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/kris/aclservice/mapper/xml/*.xml
+server:
+  port: 8009
+spring:
+  application:
+    name: security-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    url: jdbc:mysql://kris.com:3306/security_demo?serverTimezone=GMT%2B8
+    username: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    database: 0
+    host: kris.com
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 5
+        max-wait: -1
+        min-idle: 0
+    port: 6379
+    timeout: 1800000
+    password: 123456
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://kris.com:6001/eureka/
