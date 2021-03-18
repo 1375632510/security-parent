@@ -1,5 +1,6 @@
 package com.kris.base.domain;
 
+import com.kris.base.exception.KrisEnum;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -39,6 +40,10 @@ public class R<T> implements Serializable {
         return success(msg, null);
     }
 
+    public static <T> R<T> success(KrisEnum krisEnum) {
+        return success(krisEnum.getCode(), krisEnum.getMsg());
+    }
+
     public static <T> R<T> error(Integer code, String msg, T data) {
         return new R<T>(code, msg, data);
     }
@@ -53,5 +58,9 @@ public class R<T> implements Serializable {
 
     public static <T> R<T> error(String msg) {
         return error(msg, null);
+    }
+
+    public static <T> R<T> error(KrisEnum krisEnum) {
+        return error(krisEnum.getCode(), krisEnum.getMsg());
     }
 }

@@ -22,4 +22,17 @@ public class GlobalExceptionAdvice {
         return R.error(e.getCode(), e.getMsg());
     }
 
+    @ExceptionHandler(ArithmeticException.class)
+    public R<?> error(ArithmeticException e) {
+        log.error(e.getMessage());
+        e.printStackTrace();
+        return R.error(e.getMessage());
+    }
+
+    @ExceptionHandler(Exception.class)
+    public R<?> error(Exception e) {
+        log.error(e.getMessage());
+        e.printStackTrace();
+        return R.error(e.getMessage());
+    }
 }

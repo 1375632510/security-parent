@@ -22,4 +22,8 @@ public class KrisException extends RuntimeException {
      * 错误信息
      */
     private String msg;
+
+    public KrisException(KrisEnum krisEnum) {
+        this(krisEnum.getCode(), krisEnum.getMsg());
+    }
 }

@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    com.kris.auth.config.KrisWebSecurityConfig
+  com.kris.base.config.SecurityBaseConfig

@@ -1,0 +1,16 @@
+{
+  "properties": [
+    {
+      "name": "token.time",
+      "type": "java.lang.Long",
+      "description": "the token expiration time.",
+      "defaultValue": "24*60*60*1000"
+    },
+    {
+      "name": "token.signKey",
+      "type": "java.lang.String",
+      "description": "the token signKey.",
+      "defaultValue": "kris"
+    }
+  ]
+}

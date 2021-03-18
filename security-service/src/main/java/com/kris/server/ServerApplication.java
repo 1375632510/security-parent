@@ -1,4 +1,4 @@
-package com.kris.gateway;
+package com.kris.server;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,12 +16,12 @@ import java.net.UnknownHostException;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class GatewayApplication {
+public class ServerApplication {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GatewayApplication.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServerApplication.class);
 
     public static void main(String[] args) throws UnknownHostException {
-        SpringApplication app = new SpringApplication(GatewayApplication.class);
+        SpringApplication app = new SpringApplication(ServerApplication.class);
         Environment env = app.run(args).getEnvironment();
         LOGGER.info("{}项目启动,地址：\thttp://{}:{}", env.getProperty("spring.application.name")
                 , InetAddress.getLocalHost().getHostAddress(), env.getProperty("server.port"));
