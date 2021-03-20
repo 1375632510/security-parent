@@ -54,7 +54,7 @@ public class Role implements Serializable {
      */
     @TableField(value = "is_deleted")
     @ApiModelProperty(value="逻辑删除 1（true）已删除， 0（false）未删除")
-    private Byte isDeleted;
+    private Integer isDeleted;
 
     /**
      * 创建时间

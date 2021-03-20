@@ -50,7 +50,7 @@ public class Permission implements Serializable {
      */
     @TableField(value = "`type`")
     @ApiModelProperty(value="类型(1:菜单,2:按钮)")
-    private Byte type;
+    private Integer type;
 
     /**
      * 权限值
@@ -85,14 +85,14 @@ public class Permission implements Serializable {
      */
     @TableField(value = "`status`")
     @ApiModelProperty(value="状态(0:禁止,1:正常)")
-    private Byte status;
+    private Integer status;
 
     /**
      * 逻辑删除 1（true）已删除， 0（false）未删除
      */
     @TableField(value = "is_deleted")
     @ApiModelProperty(value="逻辑删除 1（true）已删除， 0（false）未删除")
-    private Byte isDeleted;
+    private Integer isDeleted;
 
     /**
      * 创建时间
