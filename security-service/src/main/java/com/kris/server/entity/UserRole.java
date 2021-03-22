@@ -15,7 +15,7 @@ import java.util.Date;
  * @Author: chenyu
  * @Date: 2021/3/18
  */
-@ApiModel(value = "com-kris-server-entity-UserRole")
+@ApiModel(value = "UserRole对象", description = "")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -47,7 +47,7 @@ public class UserRole implements Serializable {
      */
     @TableField(value = "is_deleted")
     @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
-    private Integer isDeleted;
+    private Boolean isDeleted;
 
     /**
      * 创建时间
